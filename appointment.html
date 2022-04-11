@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./appointment.css" />
+    <link rel="stylesheet" href="./home.css" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <!-- navbar  start-->
+    <header>
+      <a href="#" class="logo">Good Hospital</a>
+      <ul class="nav">
+        <li><a href="#" class="active" onclick="toggle()">Home</a></li>
+        <li><a href="#" onclick="toggle()">Test and Procedures</a></li>
+        <li><a href="#" onclick="toggle()">Find a doctor</a></li>
+        <li><a href="#" onclick="toggle()">Energency</a></li>
+        <li><a href="#" onclick="toggle()">Apointment</a></li>
+        <li><a href="#" onclick="toggle()">About</a></li>
+      </ul>
+      <button class="login">Login / SignUp</button>
+
+      <!-- user vala section start-->
+      <!-- <div class="user">
+                <div class="menu-title">
+                  <ion-icon name="people-outline" ></ion-icon>
+                </div>
+                <ul class="menu-dropdown">
+                    <li><a href="#">Option 1</a></li>
+                    <li><a href="#">Option 2</a></li>
+                    <li><a href="#">Option 3</a></li>
+                    <li><a href="#">Logout</a></li>
+                  </ul>
+            </div> -->
+      <!-- user vala section end-->
+      <div class="toggle" onclick="toggle()"></div>
+    </header>
+    <!-- navbar  end-->
+
+    <!-- appointment  start-->
+    <div class="appointment">
+      <h1>Search Doctor</h1>
+      <div class="department">
+        <div class="btn-group m-3">
+          <button
+            type="button"
+            class="btn btn-danger dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Department
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+        <input type="date" name="Select a Date" id="" />
+        <button>Book Appointment</button>
+      </div>
+      <h1 class="avdoc">Available Doctor <span>50</span></h1>
+      <div class="doctors">
+          <div class="doctor">
+              <div class="doctorinfo">
+                  <img src="https://max-website20-images.s3.ap-south-1.amazonaws.com/Dr_20_Smriti_20_Bouri_77d4bac832.jpg" alt="">
+                  <div class="doctorinfo2">
+                      <p>Dr. Smriti Bouri </p>
+                      <p>Principal Consultant - Cosmetic Dentistry, Prosthodontist and Implantologists </p>
+                  </div>
+              </div>
+              <div class="doctorfee">
+                  <h5>Good Hospital , Delhi - <span>Consultation fee - 700</span></h5>
+                  <p class="doctortime">10:30AM - 8:00PM</p>
+              </div>
+              <button class="consult" data-bs-toggle="modal" data-bs-target="#exampleModal">In hospital Consultancy</button>
+          </div>
+          <div class="doctor">
+            <div class="doctorinfo">
+                <img src="https://max-website20-images.s3.ap-south-1.amazonaws.com/Aman_popli_7bec4651e7.jpg" alt="">
+                <div class="doctorinfo2">
+                    <p>Dr. Aman Popli </p>
+                    <p> Principal Consultant - Cosmetic Dentistry, Prosthodontist and Implantologists
+                      Dental Care, Covid-19 </p>
+                </div>
+            </div>
+            <div class="doctorfee">
+                <h5>Good Hospital , Delhi - <span>Consultation fee - 600</span></h5>
+                <p class="doctortime">1:30PM - 6:00PM</p>
+            </div>
+            <button class="consult" data-bs-toggle="modal" data-bs-target="#exampleModal">In hospital Consultancy</button>
+        </div>
+        <div class="doctor">
+          <div class="doctorinfo">
+              <img src="https://max-website20-images.s3.ap-south-1.amazonaws.com/Dr_Aishwarya_Verma_7bde578add.jpg" alt="">
+              <div class="doctorinfo2">
+                  <p>Dr. Smriti Bouri </p>
+                  <p>Principal Consultant - Cosmetic Dentistry, Prosthodontist and Implantologists </p>
+              </div>
+          </div>
+          <div class="doctorfee">
+              <h5>Good Hospital , Delhi - <span>Consultation fee - 700</span></h5>
+              <p class="doctortime">10:30AM - 8:00PM</p>
+          </div>
+          <button class="consult" data-bs-toggle="modal" data-bs-target="#exampleModal">In hospital Consultancy</button>
+      </div>
+      </div>
+    </div>
+    <!-- appointment  end-->
+
+
+    <!-- modal start -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Book Appointment</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <form class="row g-3">
+                  <div class="col-md-6">
+                      <label for="patient_name" class="form-label">Name</label>
+                      <input type="text" class="form-control" id="patient_name">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="phoneNo" class="form-label">Phone Number</label>
+                      <input type="number" class="form-control" maxlength="10" id="phoneNo">
+                    </div>
+  
+                  <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="currDate" class="form-label">date</label>
+                    <input type="date" class="form-control" id="currDate">
+                  </div>
+                </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Book</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal end -->
+
+    <!-- footer start -->
+    <footer>
+        <div class="foot">
+          <div class="foot1">
+            <h1>Category</h1>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Test and Procedures</a></li>
+              <li><a href="#">Find a Doctor</a></li>
+              <li><a href="#">Emergency</a></li>
+              <li><a href="#">About</a></li>
+            </ul>
+          </div>
+          <div class="foot2">
+            <div class="text">
+              Message Us</div>
+              <form action="#">
+                  <div class="fields">
+                      <div class="field name">
+                          <input type="text" placeholder="Name" required>
+                        </div>
+                <div class="field email">
+                  <input type="email" placeholder="Email" required>
+                    </div>
+              </div>
+              <div class="field">
+                  <input type="text" placeholder="Subject" required>
+                    </div>
+                      <div class="field">
+                         <input type="text" placeholder="Message" required>
+                       </div>
+                     <button type="submit">Send message</button>
+              </form>
+              </div>
+          </div>
+          <div class="foot3">
+            <h1>Social links</h1>
+            <ul class="links">
+              <li><a><ion-icon name="logo-facebook"></ion-icon></a></li>
+              <li><a><ion-icon name="logo-instagram"></ion-icon></a></li>
+              <li><a><ion-icon name="logo-linkedin"></ion-icon></a></li>
+              <li><a><ion-icon name="logo-github"></ion-icon></a></li>
+            </ul>
+          </div>
+        </div>
+  
+        <span
+          >Created By <a href="#">Manish Bisht</a> |
+          <span></span> 2020 All rights reserved.</span
+        >
+      </footer>
+      <!-- footer end -->
+
+
+      <!-- nvabr scrool script -->
+    <script>
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      });
+
+      function toggle() {
+        var header = document.querySelector("header");
+        header.classList.toggle("active");
+      }
+    </script>
+
+    <!-- cdn for bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
